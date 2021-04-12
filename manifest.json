@@ -1,0 +1,26 @@
+{
+  "name": "resize-fb-chat",
+  "description": "resize chat bubbles",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "/images/icon.png"
+  }
+
+}
